@@ -5,9 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#17211f">
   <meta name="description" content="A wedding invitation for Grace and Saurabh, 14 November 2026.">
-  <meta property="og:title" content="Grace & Saurabh | 14 November 2026">
-  <meta property="og:description" content="With joyful hearts, we invite you to celebrate our wedding in Ernakulam.">
+  <meta property="og:title" content="Grace &amp; Saurabh — Wedding Invitation">
+  <meta property="og:description" content="Every great journey is better with loved ones beside us. Join ours. &#9825;">
   <meta property="og:type" content="website">
+  <meta property="og:image" content="{{ url_for('static', filename='images/image3.jpeg', _external=True) }}">
+  <meta property="og:url" content="{{ request.url }}">
+  <meta property="og:site_name" content="Grace &amp; Saurabh">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Grace &amp; Saurabh — Wedding Invitation">
+  <meta name="twitter:description" content="Every great journey is better with loved ones beside us. Join ours. &#9825;">
+  <meta name="twitter:image" content="{{ url_for('static', filename='images/image3.jpeg', _external=True) }}">
   <title>Grace & Saurabh | A day to remember</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -63,9 +70,9 @@
     <section class="gallery section-pad" id="gallery">
       <div class="section-heading reveal"><div><p class="eyebrow">A few favorite frames</p><h2 class="section-title">Our little<br><i>love story.</i></h2></div><span class="gallery-number">01—04</span></div>
       <div class="gallery-grid">
-        <figure class="gallery-card gallery-card--tall reveal"><img src="{{ url_for('static', filename='images/image1.jpeg') }}" alt="Grace and Saurabh together"><figcaption>Where it all feels easy</figcaption></figure>
-        <figure class="gallery-card reveal"><img src="{{ url_for('static', filename='images/image2.png') }}" alt="Grace and Saurabh in a tender moment"><figcaption>The details we hold close</figcaption></figure>
-        <figure class="gallery-card reveal"><img src="{{ url_for('static', filename='images/image3.jpeg') }}" alt="Grace and Saurabh smiling together"><figcaption>And every reason to celebrate</figcaption></figure>
+        <figure class="gallery-card gallery-card--tall reveal"><img src="{{ url_for('static', filename='images/image1.jpeg') }}" loading="lazy" alt="Grace and Saurabh together"><figcaption>Where it all feels easy</figcaption></figure>
+        <figure class="gallery-card reveal"><img src="{{ url_for('static', filename='images/image2.png') }}" loading="lazy" alt="Grace and Saurabh in a tender moment"><figcaption>The details we hold close</figcaption></figure>
+        <figure class="gallery-card reveal"><img src="{{ url_for('static', filename='images/image3.jpeg') }}" loading="lazy" alt="Grace and Saurabh smiling together"><figcaption>And every reason to celebrate</figcaption></figure>
       </div>
     </section>
 
