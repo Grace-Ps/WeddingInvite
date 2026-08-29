@@ -9,7 +9,7 @@ WEDDING = {
     "groom": "Saurabh",
     "date": "14 November 2026",
     "date_iso": "2026-11-14T11:00:00+05:30",
-    "time": "11 AM",
+    "time": "11:00 AM",
     "venue": "Carmel Chittor Road",
     "city": "Ernakulam",
     "maps_url": "https://maps.app.goo.gl/AtmE4XDXE1vgLMLd7",
