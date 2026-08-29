@@ -26,7 +26,7 @@
     <div class="opening__grain"></div>
     <p class="eyebrow">A little note from our hearts</p>
     <div class="monogram" aria-hidden="true"><img src="{{ url_for('static', filename='images/logo.png') }}" data-fallback="{{ url_for('static', filename='images/logo.svg') }}" alt="Grace and Saurabh logo"></div>
-    <p class="opening__kicker">You are warmly invited to celebrate</p>
+    <p class="opening__kicker">You are warmly invited to our celebration</p>
     <h1 id="opening-title">Grace <em>&amp;</em> Saurabh</h1>
     <p class="opening__date">14 · 11 · 2026</p>
     <button class="open-button" id="open-button" type="button" aria-controls="invitation" aria-expanded="false">
@@ -54,16 +54,17 @@
 
     <section class="story section-pad">
       <p class="eyebrow reveal">The invitation</p>
-      <h2 class="section-title reveal">Come share in the<br><i>joy of our beginning.</i></h2>
-      <p class="story__message reveal">There are moments in life that become memories forever. As we begin this new chapter together, your presence would make our day brighter and our celebration warmer.</p>
-      <p class="story__message reveal">With love and gratitude, we invite you to witness our vows and celebrate the start of our forever.</p>
+      <h2 class="section-title reveal">Come celebrate as we<br><i>commit our forever.</i></h2>
+      <p class="story__message reveal">Together, we debugged the chaos, fixed the bugs, and built something beautiful. Now, we’re ready to make our most meaningful commit yet — <strong>a lifetime together.</strong> &#128187;&#10084;&#65039;</p>
+      <p class="story__message reveal">As we begin this new chapter, your presence would make our day brighter and our celebration warmer.</p>
+      <p class="story__message reveal">With love and gratitude, we invite you to be part of our journey as we say our vows and <strong>commit our forever.</strong> &#128141;&#10024;</p>
       <div class="signature reveal">Grace <span>&amp;</span> Saurabh</div>
     </section>
 
     <section class="countdown-section section-pad" aria-labelledby="countdown-title">
       <div class="countdown__intro reveal"><p class="eyebrow">Counting the moments</p><h2 id="countdown-title" class="section-title">Until we say<br><i>“I do.”</i></h2></div>
       <div class="countdown reveal" id="countdown" aria-live="polite">
-        <div><strong id="days">000</strong><span>days</span></div><b>:</b><div><strong id="hours">00</strong><span>hours</span></div><b>:</b><div><strong id="minutes">00</strong><span>minutes</span></div><b>:</b><div><strong id="seconds">00</strong><span>seconds</span></div>
+        <div><strong id="days">00</strong><span>days</span></div><b>:</b><div><strong id="hours">00</strong><span>hours</span></div><b>:</b><div><strong id="minutes">00</strong><span>minutes</span></div><b>:</b><div><strong id="seconds">00</strong><span>seconds</span></div>
       </div>
     </section>
 
@@ -80,6 +81,7 @@
       <p class="eyebrow reveal">The day</p><h2 class="section-title reveal">Meet us<br><i>at the altar.</i></h2>
       <div class="details-grid reveal"><div class="detail"><span class="detail__index">01</span><p class="detail__label">When</p><h3>{{ wedding.date }}</h3><p>{{ wedding.time }} onwards</p></div><div class="detail"><span class="detail__index">02</span><p class="detail__label">Where</p><h3>{{ wedding.venue }}</h3><p>{{ wedding.city }}</p></div></div>
       <a class="map-button reveal" href="{{ wedding.maps_url }}" target="_blank" rel="noopener">Open in Google Maps <span>↗</span></a>
+      <div class="map-preview reveal"><iframe loading="lazy" title="Map showing Carmel Chittor Road, Ernakulam" src="https://www.google.com/maps?q=Carmel+Chittor+Road,+Ernakulam&output=embed"></iframe></div>
     </section>
 
     <footer class="footer section-pad"><div class="footer-mark"><img src="{{ url_for('static', filename='images/logo.png') }}" data-fallback="{{ url_for('static', filename='images/logo.svg') }}" alt="Grace and Saurabh logo"></div><p>We cannot wait to celebrate<br>with you.</p><a href="#top">Back to top ↑</a><small>Made with love · 2026</small></footer>

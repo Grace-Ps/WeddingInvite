@@ -50,7 +50,7 @@ function updateCountdown() {
   };
   Object.entries(values).forEach(([key, value]) => {
     const element = document.querySelector(`#${key}`);
-    element.textContent = key === 'days' ? String(value).padStart(3, '0') : String(value).padStart(2, '0');
+    element.textContent = String(value).padStart(2, '0');
   });
 }
 updateCountdown();
