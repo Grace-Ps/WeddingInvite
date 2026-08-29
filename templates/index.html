@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#17211f">
+  <meta name="description" content="A wedding invitation for Grace and Saurabh, 14 November 2026.">
+  <meta property="og:title" content="Grace & Saurabh | 14 November 2026">
+  <meta property="og:description" content="With joyful hearts, we invite you to celebrate our wedding in Ernakulam.">
+  <meta property="og:type" content="website">
+  <title>Grace & Saurabh | A day to remember</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="opening" id="opening" aria-labelledby="opening-title">
+    <div class="opening__grain"></div>
+    <p class="eyebrow">A little note from our hearts</p>
+    <div class="monogram" aria-hidden="true"><img src="{{ url_for('static', filename='images/logo.png') }}" data-fallback="{{ url_for('static', filename='images/logo.svg') }}" alt="Grace and Saurabh logo"></div>
+    <p class="opening__kicker">You are warmly invited to celebrate</p>
+    <h1 id="opening-title">Grace <em>&amp;</em> Saurabh</h1>
+    <p class="opening__date">14 · 11 · 2026</p>
+    <button class="open-button" id="open-button" type="button" aria-controls="invitation" aria-expanded="false">
+      <span>Open invitation</span><b>→</b>
+    </button>
+    <p class="opening__hint">Tap to enter our story</p>
+  </div>
+
+  <main class="invitation" id="invitation" aria-hidden="true">
+    <header class="site-header">
+      <a class="wordmark" href="#top" aria-label="Back to top"><img src="{{ url_for('static', filename='images/logo.png') }}" data-fallback="{{ url_for('static', filename='images/logo.svg') }}" alt="Grace and Saurabh logo"></a>
+      <button class="music-toggle" id="music-toggle" type="button" aria-label="Play background music" aria-pressed="false"><span class="music-icon">♪</span><span id="music-label">Music</span></button>
+    </header>
+
+    <section class="hero" id="top">
+      <div class="hero__copy reveal">
+        <p class="eyebrow">Together with their families</p>
+        <h2>Two hearts.<br><i>One beautiful</i><br>beginning.</h2>
+        <div class="hero__rule"></div>
+        <p class="hero__date">Saturday, 14 November 2026 <span>·</span> 11 in the morning</p>
+      </div>
+      <div class="hero__photo photo-frame reveal"><img src="{{ url_for('static', filename='images/image3.jpeg') }}" alt="Grace and Saurabh together"></div>
+      <div class="scroll-cue" aria-hidden="true"><span>Scroll to explore</span><i></i></div>
+    </section>
+
+    <section class="story section-pad">
+      <p class="eyebrow reveal">The invitation</p>
+      <h2 class="section-title reveal">Come share in the<br><i>joy of our beginning.</i></h2>
+      <p class="story__message reveal">There are moments in life that become memories forever. As we begin this new chapter together, your presence would make our day brighter and our celebration warmer.</p>
+      <p class="story__message reveal">With love and gratitude, we invite you to witness our vows and celebrate the start of our forever.</p>
+      <div class="signature reveal">Grace <span>&amp;</span> Saurabh</div>
+    </section>
+
+    <section class="countdown-section section-pad" aria-labelledby="countdown-title">
+      <div class="countdown__intro reveal"><p class="eyebrow">Counting the moments</p><h2 id="countdown-title" class="section-title">Until we say<br><i>“I do.”</i></h2></div>
+      <div class="countdown reveal" id="countdown" aria-live="polite">
+        <div><strong id="days">000</strong><span>days</span></div><b>:</b><div><strong id="hours">00</strong><span>hours</span></div><b>:</b><div><strong id="minutes">00</strong><span>minutes</span></div><b>:</b><div><strong id="seconds">00</strong><span>seconds</span></div>
+      </div>
+    </section>
+
+    <section class="gallery section-pad" id="gallery">
+      <div class="section-heading reveal"><div><p class="eyebrow">A few favorite frames</p><h2 class="section-title">Our little<br><i>love story.</i></h2></div><span class="gallery-number">01—04</span></div>
+      <div class="gallery-grid">
+        <figure class="gallery-card gallery-card--tall reveal"><img src="{{ url_for('static', filename='images/image1.jpeg') }}" alt="Grace and Saurabh together"><figcaption>Where it all feels easy</figcaption></figure>
+        <figure class="gallery-card reveal"><img src="{{ url_for('static', filename='images/image2.png') }}" alt="Grace and Saurabh in a tender moment"><figcaption>The details we hold close</figcaption></figure>
+        <figure class="gallery-card reveal"><img src="{{ url_for('static', filename='images/image3.jpeg') }}" alt="Grace and Saurabh smiling together"><figcaption>And every reason to celebrate</figcaption></figure>
+      </div>
+    </section>
+
+    <section class="details section-pad" id="details">
+      <p class="eyebrow reveal">The day</p><h2 class="section-title reveal">Meet us<br><i>at the altar.</i></h2>
+      <div class="details-grid reveal"><div class="detail"><span class="detail__index">01</span><p class="detail__label">When</p><h3>{{ wedding.date }}</h3><p>{{ wedding.time }} onwards</p></div><div class="detail"><span class="detail__index">02</span><p class="detail__label">Where</p><h3>{{ wedding.venue }}</h3><p>{{ wedding.city }}</p></div></div>
+      <a class="map-button reveal" href="{{ wedding.maps_url }}" target="_blank" rel="noopener">Open in Google Maps <span>↗</span></a>
+    </section>
+
+    <footer class="footer section-pad"><div class="footer-mark"><img src="{{ url_for('static', filename='images/logo.png') }}" data-fallback="{{ url_for('static', filename='images/logo.svg') }}" alt="Grace and Saurabh logo"></div><p>We cannot wait to celebrate<br>with you.</p><a href="#top">Back to top ↑</a><small>Made with love · 2026</small></footer>
+  </main>
+  <audio id="background-audio" loop preload="none" src="https://www.youtube.com/watch?v=IWOPRFRNj3ga"></audio>
+  <script>window.WEDDING_DATE = "{{ wedding.date_iso }}";</script>
+  <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>

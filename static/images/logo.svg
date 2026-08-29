@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" role="img" aria-labelledby="title desc">
+  <title id="title">Grace and Saurabh wedding logo</title>
+  <desc id="desc">A gold heart-shaped monogram with the initials G and S</desc>
+  <defs>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fff0a8"/>
+      <stop offset=".28" stop-color="#dca72d"/>
+      <stop offset=".58" stop-color="#fff0a8"/>
+      <stop offset="1" stop-color="#b66f08"/>
+    </linearGradient>
+  </defs>
+  <path d="M400 460C335 370 112 272 92 128 80 43 190 18 260 88c50-64 126-68 140-68 14 0 90 4 140 68 70-70 180-45 168 40-20 144-243 242-308 332Z" fill="none" stroke="url(#gold)" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M400 192v230M292 192h216M350 192c0 0 50 0 50 50v180" fill="none" stroke="url(#gold)" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
