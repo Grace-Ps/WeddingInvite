@@ -1,9 +1,6 @@
 const opening = document.querySelector('#opening');
 const invitation = document.querySelector('#invitation');
 const openButton = document.querySelector('#open-button');
-const audio = document.querySelector('#background-audio');
-const musicToggle = document.querySelector('#music-toggle');
-const musicLabel = document.querySelector('#music-label');
 
 openButton.addEventListener('click', () => {
   opening.classList.add('is-open');
@@ -12,25 +9,6 @@ openButton.addEventListener('click', () => {
   openButton.setAttribute('aria-expanded', 'true');
   setTimeout(() => document.querySelector('.hero .reveal')?.classList.add('visible'), 700);
   createPetals();
-});
-
-musicToggle.addEventListener('click', async () => {
-  if (audio.paused) {
-    try {
-      await audio.play();
-      musicToggle.classList.add('is-playing');
-      musicToggle.setAttribute('aria-pressed', 'true');
-      musicLabel.textContent = 'Playing';
-    } catch {
-      musicLabel.textContent = 'Open music';
-      window.open('https://www.youtube.com/watch?v=IWOPRFRNj3ga', '_blank', 'noopener');
-    }
-  } else {
-    audio.pause();
-    musicToggle.classList.remove('is-playing');
-    musicToggle.setAttribute('aria-pressed', 'false');
-    musicLabel.textContent = 'Music';
-  }
 });
 
 document.querySelectorAll('img[data-fallback]').forEach((image) => {
